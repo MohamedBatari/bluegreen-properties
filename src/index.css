@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth fonts */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+  padding: 0;
+}
+
+/* RTL basics for Arabic */
+:root[dir='rtl'] body { direction: rtl; }
+:root[dir='rtl'] .text-left { text-align: right; }
