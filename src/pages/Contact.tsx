@@ -49,8 +49,8 @@ export default function Contact() {
             </li>
             <li className="flex items-center gap-3">
               <Phone className="text-[#E3C77A] h-5 w-5" />
-              <a href="tel:+971500000000" className="hover:text-[#E3C77A] transition">
-                +971 50 000 0000
+              <a href="tel:+971544980604" className="hover:text-[#E3C77A] transition">
+                +971 54 498 0604
               </a>
             </li>
             <li className="flex items-center gap-3">
@@ -59,7 +59,7 @@ export default function Contact() {
                 href="mailto:info@bluegreenproperties.ae"
                 className="hover:text-[#E3C77A] transition"
               >
-                info@bluegreenproperties.ae
+                atasdan@bluegreen-properties.com
               </a>
             </li>
             <li className="flex items-center gap-3">
