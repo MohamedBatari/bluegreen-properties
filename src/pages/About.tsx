@@ -300,29 +300,36 @@ export default function About() {
         </ol>
       </section>
 
-      {/* ============ Testimonials ============ */}
-      <section className="mt-16">
-        <div className="flex items-center gap-3">
-          <Star className="h-5 w-5 text-[#F9D47E]" />
-          <h3 className="text-2xl font-semibold text-black">What Investors Say</h3>
+     <section className="relative mt-20 bg-white py-16">
+  <h3 className="text-2xl font-semibold text-black mb-10 text-center">
+    Our Journey
+  </h3>
+
+  <div className="relative border-l border-gray-300 pl-8 ml-3 space-y-10 max-w-3xl mx-auto">
+    {[
+      { year: "2020", text: "BlueGreen founded and first Dubai listings launched." },
+      { year: "2021", text: "Reached 50M AED in total property sales." },
+      { year: "2023", text: "Expanded to 3 new luxury areas in Dubai Marina." },
+      { year: "2025", text: "Partnered with major developers across the UAE." },
+    ].map((item, i) => (
+      <div key={i} className="relative">
+        {/* Dot */}
+        <div className="absolute -left-[11px] top-2 h-4 w-4 rounded-full border-2 border-[#EAB308] bg-white shadow-[0_0_8px_rgba(234,179,8,0.4)]" />
+
+        {/* Year and text */}
+        <div className="ml-6">
+          <span className="block text-[#EAB308] font-bold text-lg mb-1">
+            {item.year}
+          </span>
+          <p className="text-black/80 text-sm md:text-base leading-relaxed">
+            {item.text}
+          </p>
         </div>
-        <div className="mt-6 relative overflow-hidden rounded-3xl border border-[#1C1C1C] bg-[#0A0B0E]">
-          <div className="flex gap-6 py-8 px-6 animate-[slide_24s_linear_infinite]">
-            {testimonials.concat(testimonials).map((t, i) => (
-              <figure key={i} className="min-w-[320px] max-w-sm rounded-2xl border border-[#1C1C1C] bg-[#0B0C0E] p-6">
-                <blockquote className="text-gray-300">&ldquo;{t.quote}&rdquo;</blockquote>
-                <figcaption className="mt-4 text-sm text-gray-500">
-                  <span className="font-medium text-white">{t.name}</span> · {t.title}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <style>
-            {`@keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-              @media (prefers-reduced-motion: reduce) { .animate-[slide_24s_linear_infinite] { animation: none; } }`}
-          </style>
-        </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* ============ Awards & Media ============ */}
       <section className="mt-16 grid md:grid-cols-2 gap-6">

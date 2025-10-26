@@ -32,7 +32,7 @@ const dict: Record<Lang, any> = {
       remote: { title: 'Remote Investor Friendly', desc: 'Digital signatures, video tours, and transparent reporting while abroad.' }
     },
     projects: {
-      subtitle: 'Starter showcase — replace with live listings later.', detail: 'Curated off‑plan and ready options. Replace with your real stock later.',
+      subtitle: 'Starter .', detail: 'Curated off‑plan and ready options.',
       sample1: { title: 'Marina Waterfront 1BR', location: 'Dubai Marina' },
       sample2: { title: 'Saadiyat Beach Villa', location: 'Abu Dhabi — Saadiyat' },
       sample3: { title: 'Downtown Skyline 2BR', location: 'Downtown Dubai' },
