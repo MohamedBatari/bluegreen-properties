@@ -69,7 +69,7 @@ export default function Contact() {
           </ul>
 
           <a
-            href="https://wa.me/971500000000?text=Hi%20BlueGreen%20Properties%2C%20I%20want%20more%20info."
+            href="https://wa.me/971544980604?text=Hi%20BlueGreen%20Properties%2C%20I%20want%20more%20info."
             target="_blank"
             rel="noreferrer"
             className="mt-10 inline-flex items-center gap-2 bg-gradient-to-r from-[#E3C77A] to-[#C99846] text-black font-semibold px-6 py-3 rounded-full shadow-[0_0_25px_rgba(227,199,122,0.3)] hover:brightness-110 transition"

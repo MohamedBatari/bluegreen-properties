@@ -42,9 +42,9 @@ function useInView<T extends HTMLElement>(threshold = 0.18, rootMargin = "-60px 
 export default function About() {
   // Stats animation trigger
   const { ref: statsRef, inView: statsInView } = useInView<HTMLDivElement>(0.2);
-  const years = useCountUp(10, statsInView);
+  const years = useCountUp(4, statsInView);
   const sold = useCountUp(250, statsInView);
-  const investors = useCountUp(500, statsInView);
+  const investors = useCountUp(100, statsInView);
 
   // Auto-scroll testimonials (simple CSS animation toggled by prefers-reduced-motion)
   const testimonials = useMemo(
@@ -109,7 +109,7 @@ export default function About() {
           </span>
         </h1>
         <p className="mt-3 text-gray-300 text-lg">
-          10+ Years in Dubai • AED 250M+ Sold • 500+ Investors Guided
+          4+ Years in Dubai • AED 250M+ Sold • 100+ Investors Guided
         </p>
       </header>
 
@@ -278,27 +278,7 @@ export default function About() {
         </style>
       </section>
 
-      {/* ============ Timeline ============ */}
-      <section className="mt-16">
-        <h3 className="text-2xl font-semibold text-black">Journey</h3>
-        <ol className="mt-6 relative border-l border-[#1C1C1C] pl-6 space-y-8">
-          {[
-            { year: "2013", title: "Early Dubai Operations", desc: "Advising on off-plan and prime micro-locations." },
-            { year: "2016", title: "Developer Partnerships", desc: "Began unlocking exclusive allocations and stacks." },
-            { year: "2020", title: "Portfolio Scale", desc: "Expansion through cycles; strengthened yield management." },
-            { year: "2024", title: "AED 250M+ Sold", desc: "Milestone achieved with a global investor base." },
-          ].map((e, i) => (
-            <li key={i} className="relative">
-              <span className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-[#F9D47E] ring-4 ring-[#0A0B0E]" />
-              <div className="flex flex-wrap items-center gap-x-4">
-                <span className="text-xs font-bold text-[#CDAA53]">{e.year}</span>
-                <h4 className="font-semibold text-white">{e.title}</h4>
-              </div>
-              <p className="mt-1 text-sm text-gray-400">{e.desc}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
+    
 
      <section className="relative mt-20 bg-white py-16">
   <h3 className="text-2xl font-semibold text-black mb-10 text-center">

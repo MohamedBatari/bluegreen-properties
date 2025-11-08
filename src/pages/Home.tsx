@@ -1,41 +1,85 @@
-import Hero from '@/components/Hero'
-import FeatureCard from '@/components/FeatureCard'
-import PropertyCard from '@/components/PropertyCard'
-import { ShieldCheck, Building2, Handshake, Globe2 } from 'lucide-react'
+import Hero from "@/components/Hero";
+import FeatureCard from "@/components/FeatureCard";
+import { ShieldCheck, Building2, Handshake, Globe2 } from "lucide-react";
+import Projects from "@/pages/Projects";
 
 export default function Home() {
   const features = [
-    { icon: <ShieldCheck className="w-6 h-6" />, title: 'Tax‑Free Income Guidance', desc: "Clear, compliant strategies to benefit from UAE real estate income." },
-    { icon: <Building2 className="w-6 h-6" />, title: 'Property Selection', desc: 'Hand‑picked projects across Dubai & Abu Dhabi matched to your goals.' },
-    { icon: <Handshake className="w-6 h-6" />, title: 'End‑to‑End Management', desc: 'From reservation to handover, leasing and renewals — one contact.' },
-    { icon: <Globe2 className="w-6 h-6" />, title: 'Remote Investor Friendly', desc: 'Digital signatures, video tours, and transparent reporting while abroad.' },
-  ]
+    { icon: ShieldCheck, title: "Tax-Free Income Guidance", desc: "Clear strategies to benefit from UAE real estate income." },
+    { icon: Building2,   title: "Property Selection",        desc: "Hand-picked projects in Dubai & Abu Dhabi, matched to your goals." },
+    { icon: Handshake,   title: "End-to-End Management",     desc: "Reservation to handover, leasing and renewals — one contact." },
+    { icon: Globe2,      title: "Remote Investor Friendly",  desc: "Digital signatures, video tours, transparent reporting while abroad." },
+  ];
 
-  const sample = [
-    { title: 'Marina Waterfront 1BR', location: 'Dubai Marina', img: 'https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop', price: 'AED 1.65M' },
-    { title: 'Saadiyat Beach Villa', location: 'Abu Dhabi — Saadiyat', img: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop', price: 'AED 9.2M' },
-    { title: 'Downtown Skyline 2BR', location: 'Downtown Dubai', img: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1200&auto=format&fit=crop', price: 'AED 3.1M' },
-  ]
+  const partners = [
+    "/logos/emaar.png",
+    "/logos/nakheel.png",
+    "/logos/aldar.png",
+    "/logos/dubai-properties.png",
+    "/logos/damac.png",
+    "/logos/sobha.png",
+  ];
 
   return (
     <>
       <Hero />
-      <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16" id="services">
-        <h2 className="text-3xl font-bold tracking-tight">What We Do</h2>
-        <p className="mt-3 text-slate-600 max-w-2xl">Tailored, transparent services covering the full investment lifecycle.</p>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((f,i) => <FeatureCard key={i} icon={f.icon} title={f.title} desc={f.desc} />)}
-        </div>
-      </section>
-      <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16" id="projects">
-        <h2 className="text-3xl font-bold tracking-tight">Featured Properties</h2>
-        <p className="mt-3 text-slate-600 max-w-2xl">Starter showcase — replace with live listings later.</p>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sample.map((p,i) => (
-            <PropertyCard key={i} {...p} />
+
+      {/* WHAT WE DO */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="text-4xl font-bold tracking-tight">What We Do</h2>
+        <p className="mt-4 text-slate-600 max-w-2xl">
+          Tailored, transparent services covering the full investment lifecycle.
+        </p>
+
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((f,i) => (
+            <FeatureCard key={i} icon={<f.icon className="w-6 h-6" />} title={f.title} desc={f.desc} />
           ))}
         </div>
       </section>
+
+    {/* PARTNERS */}
+<section className="bg-black py-24">
+  <div className="mx-auto max-w-7xl px-6">
+    <h2 className="text-4xl font-bold text-white text-center">Trusted Partners</h2>
+    <p className="text-slate-400 text-center mt-2 text-lg">
+      Working with the most iconic developers in UAE
+    </p>
+
+    <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 place-items-center">
+      {[
+        "/logos/emaar.png",
+        "/logos/damac.png",
+        "/logos/sobha.png",
+        "/logos/ellington.png",
+        "/logos/meraas.png",
+        "/logos/nakheel.png",
+        "/logos/azizi.png",
+        "/logos/binghatti.png",
+        "/logos/union properties.png",
+        "/logos/al dar.png",
+        "/logos/danube.png",
+        "/logos/samana.png",
+      ].map((src, i) => (
+        <div
+          key={i}
+          className="flex items-center justify-center w-full h-24 bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-neutral-700 transition shadow-xl shadow-black/20"
+        >
+          <img
+            src={src}
+            className="h-16 w-auto object-contain opacity-85 hover:opacity-100 transition"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+      {/* PROJECTS SECTION */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+        <Projects />
+      </section>
     </>
-  )
+  );
 }
