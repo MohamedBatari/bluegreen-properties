@@ -94,7 +94,7 @@ export default function Services() {
         <div className="mt-20 text-center">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[#C6A34F] to-[#E0C068] px-6 py-3 rounded-full text-black font-semibold shadow-md">
             <Shield className="h-5 w-5" />
-            100% Transparency — 10+ Years of Trust
+            100% Transparency — 4+ Years of Trust
           </div>
         </div>
 
