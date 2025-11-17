@@ -88,7 +88,7 @@ export default function Footer() {
           <span className="text-gold font-semibold">BlueGreen Properties</span>. All rights reserved.
         </p>
         <p className="mt-2 text-xs text-gray-600">
-          Designed & built with ❤️ in Dubai | Luxury Real Estate Platform
+          Designed & built with in Dubai
         </p>
       </div>
     </footer>
