@@ -115,6 +115,17 @@ export default function About() {
 
       {/* Hero block with portrait + bio */}
       <div className="mt-12 grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
+
+              {/* Portrait */}
+        <div className="relative rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(249,212,126,0.2)] border border-[#1C1C1C]">
+          {/* Put Ali's real image in /public with this exact name */}
+          <img
+            src="/Ali tasdan.PNG"
+            alt="Ali Tasdan — Founder of BlueGreen Properties"
+            className="object-cover w-full h-full"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0B0E]/90 via-transparent to-transparent" />
+        </div>
         {/* Bio */}
         <article className="rounded-3xl bg-[#0A0B0E] p-10 text-gray-200 shadow-[0_0_60px_rgba(249,212,126,0.08)] border border-[#1C1C1C]">
           <div className="flex items-center gap-3 text-[#F9D47E]">
@@ -149,16 +160,7 @@ export default function About() {
           </div>
         </article>
 
-        {/* Portrait */}
-        <div className="relative rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(249,212,126,0.2)] border border-[#1C1C1C]">
-          {/* Put Ali's real image in /public with this exact name */}
-          <img
-            src="/Ali tasdan.PNG"
-            alt="Ali Tasdan — Founder of BlueGreen Properties"
-            className="object-cover w-full h-full"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0B0E]/90 via-transparent to-transparent" />
-        </div>
+
       </div>
 
       {/* ============ Metrics + Video ============ */}
@@ -343,22 +345,39 @@ export default function About() {
         <p className="mt-2 text-sm text-gray-400 max-w-2xl">
           BlueGreen’s ecosystem spans advisory, allocations, property management, and after-sales service.
         </p>
-        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            { name: "Mariam S.", role: "Portfolio Advisor" },
-            { name: "Ahmed R.", role: "Allocations & Launches" },
-            { name: "Sophia K.", role: "Property Management" },
-            { name: "Omar H.", role: "After-Sales & Leasing" },
-          ].map((m, i) => (
-            <div key={i} className="rounded-2xl overflow-hidden border border-[#1C1C1C] bg-[#0A0B0E]">
-              <div className="h-40 bg-[url('https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1400&auto=format&fit=crop')] bg-cover bg-center" />
-              <div className="p-4">
-                <div className="font-semibold text-white">{m.name}</div>
-                <div className="text-xs text-gray-400">{m.role}</div>
-              </div>
-            </div>
-          ))}
+       {/* TEAM SECTION */}
+<section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+  <h2 className="text-4xl font-bold tracking-tight text-center">Our Leadership</h2>
+  <p className="text-slate-600 text-center mt-3 max-w-2xl mx-auto">
+    Experienced professionals leading BlueGreen Properties with vision and integrity.
+  </p>
+
+  <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    {[
+      { name: "Ali Tasdan", role: "Founder & CEO", img: "/ALI TASDAN - FOUNDER.jpg" },
+      { name: "Houda Berrada", role: "Marketing Director", img: "/HOUDA BERRADA - MARKETING DIRECTOR.jpg" },
+      { name: "Almiranda Pinkan Risna", role: "Social Media Manager", img: "/ALMIRANDA PINKAN RISNA - SOCIAL MEDIA MANAGER.jpg" },
+    ].map((m, i) => (
+      <div
+        key={i}
+        className="group rounded-3xl overflow-hidden border border-gray-200 bg-white shadow-xl hover:shadow-2xl transition duration-500"
+      >
+        <div className="relative h-[420px] overflow-hidden">
+          <img
+            src={m.img}
+            alt={m.name}
+            className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          />
         </div>
+        <div className="p-6 text-center">
+          <h3 className="text-xl font-semibold text-gray-900">{m.name}</h3>
+          <p className="text-gray-500 mt-1">{m.role}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
       </section>
 
       {/* ============ FAQ ============ */}
