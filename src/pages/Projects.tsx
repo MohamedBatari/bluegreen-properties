@@ -76,7 +76,7 @@ export default function Projects() {
       <h1 className="text-4xl font-bold tracking-tight">Signature Projects by Top Developers</h1>
       <p className="mt-4 text-slate-700 max-w-3xl">
         Curated selection of current & recently launched communities from leading UAE developers.
-        Replace images with official renders and adjust starting prices as inventory updates.
+
       </p>
       <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {list.map((p, i) => (
