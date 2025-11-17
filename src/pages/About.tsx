@@ -289,10 +289,10 @@ export default function About() {
 
   <div className="relative border-l border-gray-300 pl-8 ml-3 space-y-10 max-w-3xl mx-auto">
     {[
-      { year: "2020", text: "BlueGreen founded and first Dubai listings launched." },
-      { year: "2021", text: "Reached 50M AED in total property sales." },
-      { year: "2023", text: "Expanded to 3 new luxury areas in Dubai Marina." },
-      { year: "2025", text: "Partnered with major developers across the UAE." },
+      { year: "2021", text: "Started real estate career with PSI Real Estate in Abu Dhabi, handling sales and leasing operations." },
+      { year: "2022", text: "Moved to Dubai and joined Sobha Realty as Sales Manager. Organized a Roadshow in Istanbul, connecting Turkish brokers with the Dubai market." },
+      { year: "2023", text: "Worked with leading developers and top brokerage firms including AX Capital and Nest Seekers Dubai. Recognized as a Top Performer and completed advanced Dubai market training." },
+      { year: "2025", text: "Founded BlueGreen Properties." },
     ].map((item, i) => (
       <div key={i} className="relative">
         {/* Dot */}
