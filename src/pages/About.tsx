@@ -383,7 +383,7 @@ export default function About() {
       {/* ============ FAQ ============ */}
       {/* ======================= FAQ (Expanded, Category-Based, SEO-ready) ======================= */}
 <section className="mt-16">
-  <h3 className="text-2xl font-semibold text-white">Frequently Asked Questions</h3>
+  <h3 className="text-2xl font-semibold text-black">Frequently Asked Questions</h3>
   <p className="mt-2 text-sm text-gray-400">
     We’ve answered the most common investor questions. If you don’t see what you need,
     <a href="/contact" className="text-[#CDAA53] hover:underline ml-1">book a quick consultation</a>.
