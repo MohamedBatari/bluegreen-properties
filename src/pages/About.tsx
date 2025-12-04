@@ -357,6 +357,8 @@ export default function About() {
       { name: "Ali Tasdan", role: "Founder & CEO", img: "/ALI TASDAN - FOUNDER.jpg" },
       { name: "Houda Berrada", role: "Marketing Director", img: "/HOUDA BERRADA - MARKETING DIRECTOR.jpg" },
       { name: "Almiranda Pinkan Risna", role: "Social Media Manager", img: "/ALMIRANDA PINKAN RISNA - SOCIAL MEDIA MANAGER.jpg" },
+      { name: "Denizcan Durukan Pedersen", role: "Regional Partner – Singapore, Asia & Pacific", img: "/Denizcan Durukan Pedersen.jpeg" },
+
     ].map((m, i) => (
       <div
         key={i}
